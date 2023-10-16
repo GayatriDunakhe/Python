@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, World!</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <ul>
+        {% for name in names %}
+            <li>{{ name.first_name }} {{ name.last_name }} {{name.bio}}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- for loop -->
+    {% for i in numbers %}
+        <li>{{i}}</li>
+    {% endfor %}
+
+    <!-- if condition -->
+    {% if age > 18 %}
+        <p>Your age is {{age}} your eligible for vote</p>
+
+    {% else %}
+        <p>Your age is {{age}} your not eligible for vote</p>
+
+    {% endif %}
+
+
+    
+
+</body>
+</html>
