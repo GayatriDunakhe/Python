@@ -1,0 +1,14 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Checker - Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Age Checker - Result</h1>
+    <p class="ans">{{ message }}</p>
+    <a href="{% url 'check_age' %}" class="link-btn">Check another age</a>
+</body>
+</html>

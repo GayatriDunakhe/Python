@@ -1,0 +1,27 @@
+.btn{
+    padding: 12px;
+    color: white;
+    background-color: brown;
+    border-radius: 12px;
+}
+
+.link-btn{
+    padding: 12px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.btn:hover{
+    background-color: coral;
+}
+
+.link-btn:hover{
+    background-color: brown;
+    color: white;
+}
+
+.ans{
+    font-weight: bold;
+    color: blueviolet;
+}
