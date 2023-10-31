@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block update %}
+    <h1> Update the emp from Infy Database</h1>
+
+    <form method="POST" action="/updatedata">
+        <label for="id">Enter Id</label>
+        <input type="number" name="id" placeholder="id">
+
+        <br><br>
+
+        <label for="username">Enter Username</label>
+        <input type="text" name="username" placeholder="username">
+
+        <br><br>
+
+        <label for="email">Enter Email</label>
+        <input type="email" name="email" placeholder="email">
+
+        <br><br>
+
+        <button type="submit">Update Data</button>
+    </form>
+{% endblock %}

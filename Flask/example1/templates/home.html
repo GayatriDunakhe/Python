@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block home %}
+    <h1>Home</h1>
+    <div class="alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+    </div>
+    <img src="{{ url_for('static', filename='darkimg.jpg', _external=True) }}" alt="img" width="100px">
+
+    <br><br>
+
+    <form method="POST" action="/insert">
+        <label for="id">Id</label>
+        <input type="text" name="id" placeholder="id">
+
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="email">
+
+        <button type="submit">Insert Data</button>
+    </form>
+
+    <h2>Data in table</h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for emp in data %}
+            <tr>
+                <th scope="row">{{emp[0]}}</th>
+                <td>{{emp[1]}}</td>
+                <td>{{emp[2]}}</td>
+                <td><button>Delete</button></td>
+                <td><button>Update</button></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+{% endblock %}
