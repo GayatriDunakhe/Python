@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block delete %}
+    <h1>Delete the emp from Infy Database</h1>
+
+    <form method="POST" action="/remove">
+        <label for="id">Enter Id</label>
+        <input type="number" name="id" placeholder="id">
+
+        <br><br>
+
+        <button type="submit">Delete Data</button>
+    </form>
+{% endblock %}
